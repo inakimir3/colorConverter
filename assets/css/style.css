@@ -3,9 +3,14 @@
     src: url(../fonts/GROBOLD.ttf);
 }
 
+@font-face {
+    font-family: lemonmilk;
+    src: url(../fonts/LEMONMILK.otf);
+}
+
 * {
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,14 +30,17 @@ body {
     font-family: grobold;
     font-size: 25pt;
     color: white;
+    padding-top: 50px;
 }
 
 .container {
     display: flex;
     height: 100%;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: red;
+    font-family: lemonmilk;
+    transition: all .3s;
 }
 
 .colorContainer {
@@ -44,5 +52,59 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
+
+.colorContainer div {
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    width: 65%;
+    max-width: 65%;
+}
+input {
+    outline: none;
+    border: none;
+    display:block;
+    line-height: 1.2em;
+    font-size: 14pt;
+    background: transparent;
+  }
+  label {
+    display: block;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  .btn-container {
+    width: 600px;
+    display: flex;
+    justify-content:end;
+  }
+
+  .btn-color {
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 230px;
+    height: 40px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-family: lemonmilk;
+    transition: all .2s ease-in-out;
+  }
+
+  .btn-color:hover {
+    transform: scale(0.96);
+  }
+
+  .rgb {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa-copy {
+    cursor: pointer;
+  }
